@@ -1,52 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Weather Report</title>
-    <style>
-        body {
-            font-family: Arial;
-            background: #eef2f3;
-            padding: 30px;
-            text-align: center;
-        }
-        .weather-box {
-            margin-top: 20px;
-            padding: 20px;
-            background: white;
-            display: inline-block;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #ccc;
-        }
-        input[type="text"] {
-            padding: 10px;
-            width: 250px;
-        }
-        button {
-            padding: 10px 15px;
-            margin-left: 10px;
-        }
-        .error {
-            color: red;
-        }
-    </style>
-</head>
-<body>
-    <h1>🌤️ Weather Chatbot (Web Version)</h1>
-    <form method="POST">
-        <input type="text" name="city" placeholder="Enter city name" required>
-        <button type="submit">Get Weather</button>
-    </form>
-
-    {% if weather %}
-    <div class="weather-box">
-        <h2>Weather in {{ weather.city }}, {{ weather.country }}</h2>
-        <p><strong>Temperature:</strong> {{ weather.temperature }} °C</p>
-        <p><strong>Condition:</strong> {{ weather.condition }}</p>
-        <p><strong>Humidity:</strong> {{ weather.humidity }}%</p>
-        <p><strong>Wind Speed:</strong> {{ weather.wind_speed }} m/s</p>
+  <head>
+    <title>Weather</title>
+	 <link rel="stylesheet" href="Style.css">
+  </head>
+  <body>
+    <div id="outline">
+      <header id="top"><span id="w1"> 🌤️ Weather Chat Bot</span></header>
+	  <main>
+	  <div id="tempr">
+	  <aside>
+		<h1 id="loc">Chennai</h1>
+		<h1 id="deg">32 °C</h1>
+		<h2 id="cli">Cloudy</h2>
+		<h2 id="lon">H:76° L:59°</h2>
+		</aside>
+	  </div>
+	  <div id="chatb">
+	  <div id="htxt"></div>
+		<img src="bot.png" width="400px">
+	  </div>
+	  </main>
+	  <footer>
+	    <input type="text" class="text-input" placeholder="Type your message...">
+		<button class="send-button"><span id="ch">></span></span></button></button>
+	  </footer>
     </div>
-    {% elif error %}
-    <p class="error">{{ error }}</p>
-    {% endif %}
-</body>
+  </body>
 </html>
