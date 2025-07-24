@@ -1,5 +1,5 @@
 import requests
-api_key="6555c3e2e244bd3e3c849b3434312e92"
+api_key="2"
 def weather_report(api_key):
     user_input=input("Enter the city: ")
     print(user_input)
