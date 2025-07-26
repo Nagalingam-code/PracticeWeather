@@ -25,6 +25,8 @@ aside{
 	height:300px;
 	border: black, 1px, solid;
 	padding-left:50px;
+	display:grid;
+	grid-template-columns:50% 50%;
 }
 #top{
 	height: 90px;
@@ -48,6 +50,10 @@ main{
 }
 #htxt{
 	height: 180px;
+	padding-left:60px;
+}
+#clo{
+	padding-bottom:60px;
 }
 footer{
       display: flex;
