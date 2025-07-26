@@ -10,10 +10,15 @@
 	  <main>
 	  <div id="tempr">
 	  <aside>
+		<div id="txai">
 		<h1 id="loc">Chennai</h1>
 		<h1 id="deg">32 °C</h1>
 		<h2 id="cli">Cloudy</h2>
 		<h2 id="lon">H:76° L:59°</h2>
+		</div>
+		<div>
+		<img src="" width="210px" height="210px" id="clo">
+		</div>
 		</aside>
 	  </div>
 	  <div id="chatb">
@@ -22,9 +27,24 @@
 	  </div>
 	  </main>
 	  <footer>
-	    <input type="text" class="text-input" placeholder="Type your message...">
-		<button class="send-button"><span id="ch">></span></span></button></button>
+	    <input type="text" class="text-input" placeholder="Type your message..." id="tet">
+		<button class="send-button" onclick="update()"><span id="ch">></span></span></button></button>
 	  </footer>
     </div>
+		 <script>
+		 function update(){
+		    var x = document.getElementById("tet").value;
+			x = x.toLowerCase();
+			console.log("Hi " + x)
+			if (x == "cloudy") {
+    document.getElementById("clo").src = "img/cloudy.png";
+  } else if (x == "rainy"){
+    document.getElementById("clo").src = "img/rainy.webp";
+  }
+  else if (x == "sunny"){
+    document.getElementById("clo").src = "img/sunny.webp";
+  }
+		 }
+	 </script>
   </body>
 </html>
